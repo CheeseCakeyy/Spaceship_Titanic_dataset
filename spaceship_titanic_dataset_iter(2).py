@@ -249,3 +249,5 @@ submission = pd.DataFrame({
 })
 
 submission.to_csv('submission_iter(2).csv',index=False) ##0.7996 accuracy score on kaggle; LB rank = 1453/2692, improvement from last time not bad ig it wasnt all worth nothing afterall
+
+#Aint gonna lie this 0.001 gained honestly is worth more than 0.01 gained by luck to me rn, im super pumped up!!!!
