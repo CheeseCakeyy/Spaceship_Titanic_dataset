@@ -11,7 +11,7 @@ from sklearn.preprocessing import OneHotEncoder
 from xgboost import XGBClassifier
 
 
-train_path = "C:/Users/Adwait Tagalpallewar/Downloads/spaceship-titanic/train.csv"
+train_path = "data/train.csv"
 df = pd.read_csv(train_path)
 
 
@@ -115,7 +115,7 @@ Honestly which are great so its ready in my opinion to give a shot at testing da
 #------------
 '''Iteration 3 submission '''
 #------------
-test_path = "C:/Users/Adwait Tagalpallewar/Downloads/spaceship-titanic/test.csv"
+test_path = "data/test.csv"
 test_df = pd.read_csv(test_path)
 
 #creating features, created in train df
@@ -141,4 +141,5 @@ submission = pd.DataFrame({
 })
 
 submission.to_csv('submission_iter(3).csv',index=False) #0.805 accuracy score on kaggle; LB rank = 740/2692
+
 
