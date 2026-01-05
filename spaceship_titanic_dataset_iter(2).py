@@ -82,14 +82,14 @@ preprocessor = ColumnTransformer(
         ("cat", cat_pipe, cat_cols),
         ("count", count_pipe, count_cols)
     ],
-    remainder='drop' #we already dropped the useless columns but still it helps, the other value accepted for remainder is 'passthrough' which allows the columns not entering teransformers to pass through as well 
+    remainder='drop' #already dropped the useless columns but still it helps, the other value accepted for remainder is 'passthrough' which allows the columns not entering teransformers to pass through as well 
 )
 
 
 #--------------
 '''Feautre Selection'''
 #--------------
-#we will run tests using 2 models to see which performes better logistic regression or randomforest so we will be using same models for feature selection
+#running tests using 2 models to see which performes better logistic regression or randomforest so we will be using same models for feature selection
 
 lr_feature_selector = SelectFromModel(
     LogisticRegression(
@@ -248,7 +248,6 @@ submission = pd.DataFrame({
     'Transported': y_pred
 })
 
-submission.to_csv('submission_iter(2).csv',index=False) ##0.7996 accuracy score on kaggle; LB rank = 1453/2692, improvement from last time not bad ig it wasnt all worth nothing afterall
+submission.to_csv('submission_iter(2).csv',index=False) ##0.7996 accuracy score on kaggle; LB rank = 1453/2692, improvement from last time 
 
-#Aint gonna lie this 0.001 gained honestly is worth more than 0.01 gained by luck to me rn, im super pumped up!!!!
 
